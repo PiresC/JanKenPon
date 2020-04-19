@@ -1,5 +1,5 @@
 //
-//  Start.swift
+//  Home.swift
 //  JanKenPon
 //
 //  Created by Pires Cerullo on 19/04/20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct Start: View {
+struct Home: View {
     var body: some View {
         VStack {
             ZStack() {
@@ -51,9 +51,9 @@ struct Start: View {
     }
 }
 
-struct Start_Previews: PreviewProvider {
+struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        Start()
+        Home()
     }
 }
 

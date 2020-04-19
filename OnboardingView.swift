@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  OnboardingView.swift
 //  JanKenPon
 //
 //  Created by Pires Cerullo on 19/04/20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct OnboardingView: View {
     var body: some View {
         NavigationView {
         VStack {
@@ -64,7 +64,7 @@ struct ContentView: View {
             }
             .frame(width: 300.0)
                 VStack {
-                    NavigationLink(destination: Start()){
+                    NavigationLink(destination: Home()){
                             Text("Next")
                             .font(.system(size:30, weight: .bold, design: .rounded))
                             .foregroundColor(Color.black)
@@ -86,11 +86,12 @@ struct ContentView: View {
         
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        OnboardingView()
     }
 }
+
 struct StrokeText: View {
     let text: String
     let width: CGFloat
