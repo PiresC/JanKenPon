@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct Home: View {
+    @State var show = false
     var body: some View {
         VStack {
             ZStack() {
@@ -30,22 +31,29 @@ struct Home: View {
             }
             .padding(.top, -150.0)
             .frame(width: nil)
+            
             Button(action: {
             print("Play Tapped")
             }){
             Circle()
-            .frame(width: 300, height: 300)
+            .frame(width: 270, height: 270)
             .overlay(
                 Circle()
                .stroke(Color.black,lineWidth: 12)
             )
-                .foregroundColor(Color("Jan"))
+                .foregroundColor(Color("white"))
             .overlay(
                 Image("play")
                     .padding(.leading, 35.0)
                 )
+                .scaleEffect(show ? 1:1.1)
+                .animation(Animation.spring()
+                    .repeatForever(autoreverses: true)) 
+                .onAppear(){
+                    self.show.toggle()
+                }
             }
-            .padding(.bottom, 200.0)
+            .padding(.bottom, 150.0)
         }
         .navigationBarBackButtonHidden(true)
     }
